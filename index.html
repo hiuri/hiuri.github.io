@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVES - Desenvolvimento Web de Excelência</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #000; /* Fundo preto */
+            color: #00ff00; /* Texto verde */
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            background-color: #000;
+            border-bottom: 1px solid #00ff00;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #00ff00;
+            font-size: 28px;
+        }
+        .nav-link {
+            color: #00ff00;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: #fff;
+        }
+        .header {
+            height: 100vh;
+            background: url('https://source.unsplash.com/1600x900/?technology,web') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 64px;
+            color: #00ff00;
+            text-shadow: 2px 2px 4px #000;
+            animation: fadeInDown 2s ease;
+        }
+        .header p {
+            font-size: 22px;
+            color: #ffffff;
+            animation: fadeInUp 2s ease;
+        }
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .btn-custom {
+            background-color: #00ff00;
+            color: #000;
+            border-radius: 25px;
+            padding: 12px 24px;
+            font-size: 18px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .btn-custom:hover {
+            background-color: #fff;
+            color: #00ff00;
+        }
+        /* Serviços */
+        #services {
+            padding: 80px 0;
+            background-color: #111;
+            color: #00ff00;
+        }
+        .icon-box {
+            text-align: center;
+            padding: 30px;
+            background: #222;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .icon-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px rgba(0, 255, 0, 0.3);
+        }
+        .icon-box i {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #00ff00;
+        }
+        .icon-box h4 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        /* Sobre */
+        #about {
+            background-color: #000;
+            color: #00ff00;
+            padding: 100px 0;
+        }
+        .about-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        /* Depoimentos */
+        #testimonials {
+            background-color: #111;
+            padding: 80px 0;
+            color: #00ff00;
+        }
+        .testimonial {
+            background: #222;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 255, 0, 0.2);
+        }
+        .testimonial img {
+            border-radius: 50%;
+            width: 80px;
+            margin-bottom: 15px;
+        }
+        /* Footer */
+        footer {
+            background-color: #000;
+            padding: 50px 0;
+            color: #00ff00;
+            text-align: center;
+        }
+        footer a {
+            color: #00ff00;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">DEVES</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#services">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Depoimentos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div>
+            <h1>Bem-vindo à DEVES</h1>
+            <p>Especialistas em soluções inovadoras de desenvolvimento web</p>
+            <a href="#services" class="btn btn-custom">Saiba mais</a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="icon-box">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>Desenvolvimento Web</h4>
+                        <p>Soluções personalizadas para sites e sistemas online.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon-box">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Aplicativos Mobile</h4>
+                        <p>Desenvolvemos aplicativos incríveis para Android e iOS.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon-box">
+                        <i class="fas fa-cloud"></i>
+                        <h4>Soluções em Nuvem</h4>
+                        <p>Suporte e hospedagem em ambientes escaláveis e seguros.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>Sobre a DEVES</h2>
+                <p>Na DEVES, estamos comprometidos em entregar projetos de desenvolvimento web de alta qualidade, focados nas necessidades específicas dos nossos clientes. Nossa equipe experiente e criativa está sempre pronta para oferecer soluções inovadoras, que ajudam empresas a crescer no mundo digital.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente">
+                        <h4>João Silva</h4>
+                        <p>"A DEVES transformou nosso site em uma plataforma incrível que trouxe mais visibilidade e clientes para nossa empresa!"</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente">
+                        <h4>Ana Costa</h4>
+                        <p>"O trabalho da DEVES é impecável, desde o design até o desenvolvimento. Altamente recomendados!"</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Cliente">
+                        <h4>Pedro Martins</h4>
+                        <p>"Com a ajuda da DEVES, conseguimos lançar nosso aplicativo mobile com sucesso. Eles superaram nossas expectativas!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 DEVES - Todos os direitos reservados.</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Serviço</a></p>
+    </footer>
+
+    <!-- JS, jQuery, Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
